@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL:'http://localhost:3001/',
+    baseURL:'https://fruitfulbacked.herokuapp.com/',
     header:{
         'Content-Type': 'application/json;charset=UTF-8',
         "Access-Control-Allow-Origin": "*",

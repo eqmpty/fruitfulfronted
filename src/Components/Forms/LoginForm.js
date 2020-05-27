@@ -34,7 +34,7 @@ export class LoginForm extends Component {
       loading: true
     });
 
-    axios.post('http://localhost:3001/login', this.state, { 'headers': this.headers })
+    axios.post('https://fruitfulbacked.herokuapp.com/login', this.state, { 'headers': this.headers })
       .then(response => {
         if (response.data.accessToken) {
           console.log('')
