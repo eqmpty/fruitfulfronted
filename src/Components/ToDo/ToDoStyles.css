@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
+
+.addToDoList{
+    /* border:2px solid orange; */
+    margin-top: 4rem;
+}
+
+.addToDoForm{
+    border:0.5px solid rgb(214, 214, 214);
+    padding: 1rem;
+    width: 100%;
+    height: 70%;
+    margin-top: 10%;
+    box-shadow: 0 0 20px 0 rgba(212, 211, 211, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.addToDoForm input {
+    font-family: 'Source Sans Pro', sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+#descriptionInput{
+    background: #ffffff;
+    padding: 5px;
+    /* border:1px solid red; */
+}
+
+#description{
+    font-size: 15px;
+    font-weight: 300;
+    color: rgb(109, 109, 109);
+}
+
+#addToDoButton{
+    text-transform: uppercase;
+  outline: 0;
+  background: #FF4B33;
+  width: 100%;
+  margin-left: 0%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight : 700;
+  margin-bottom: 1rem;
+}
+
+
+#addNewTask{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight : 700;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* .container,.container-fluid{
+    border:1px solid yellowgreen;
+} */
+
+#addToDoPicture{
+    width: 40rem;
+    /* border:1px solid yellowgreen; */
+}
+
+@media all and (max-width : 1000px) {
+    .addToDoForm{
+        height: 80%;
+    }  
+
+    #addToDoPicture{
+        width: 100%;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        /* border:1px solid red; */
+    }
+}
+
+.todosItem{
+    border:0.5px solid rgb(214, 214, 214);
+    padding: 1rem;
+    /* box-shadow: 0 0 20px 0 rgba(211, 211, 211, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight : 700;
+    margin-top: 1rem;
+    font-size:20px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    background-color: rgb(250, 250, 250);
+}
+
+.todosItem:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    box-shadow: 0 0 20px 0 rgba(236, 235, 235, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+@media all and (max-width : 500px){
+    .todosItem:hover{
+        box-shadow: 0 0 20px 0 rgba(236, 235, 235, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+    
+}
+
+

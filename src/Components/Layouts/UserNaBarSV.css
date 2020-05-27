@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
+
+#searchBtn{
+    text-transform: uppercase;
+  outline: 0;
+  background: black;
+  width: 100px;
+  height: 35px;
+  margin-left: 0%;
+  border: 0;
+  padding: 5px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight : 700;
+  margin-bottom: 1rem;
+}
+
+#searchInput{
+    font-family: 'Source Sans Pro', sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 250px;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+#logoutNavItem{
+    margin-left: 25rem;
+}
+
+@media all and (max-width : 1000px) {
+    #logoutNavItem{
+        margin-left: 0rem;
+    }
+  }
+
+  @media all and (max-width : 1200px) {
+    #logoutNavItem{
+        margin-left: 0rem;
+    }
+  }
+
+  @media all and (max-width : 1300px) {
+    #logoutNavItem{
+        margin-left: 0rem;
+    }
+  }
+
+  

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
+
+/* .col-lg-8{
+    border:1px solid red;
+}*/
+
+.col-lg-4{  
+} 
+
+#mainInfo{
+    height: 200px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+#profilePicture{
+    /* background-color: gray;
+    height: 200px;
+    width: 100px; */
+}
+
+#avatar{
+    background-color: rgb(231, 231, 231);
+    height: 200px;
+    width: 200px;
+    border-radius: 100% ;
+    -webkit-border-radius: 100% ;
+    -moz-border-radius: 100% ;
+    -ms-border-radius: 100% ;
+    -o-border-radius: 100% ;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#userName, .userNick{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight : 700;
+    font-size:40px;
+    /*border:1px solid red;*/
+}
+
+.userNick{
+    font-size:15px;
+    color:rgb(134, 133, 133);
+    font-weight: 400;
+    /*border:1px solid red;*/
+}
+
+#profileDescription input {
+    font-family: 'Source Sans Pro', sans-serif;
+    outline: 0;
+    background: #ebe9e9;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+@media all and (max-width : 1000px) {
+    #mainInfo{
+      height: 300px;
+    }
+
+    #profileDescription{
+        text-align: center;
+    }
+  }
+
+
+/*nav bar*/
+
+.myBtn{
+    text-transform: uppercase;
+    outline: 0;
+    background: rgb(246,125,123);;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight : 700;
+    height: 40px;
+}
+
+/* .col-lg-4{
+    border:1px solid red;
+} */
+
+#userMenuWrapper{
+    background-color: rgb(235, 235, 235);
+    margin-top:2rem;
+    margin: 2rem 1rem 0rem 1rem ;
+    padding: 0;
+}
+
+.userMenuItem{
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: rgb(138, 138, 138);
+    font-size:20px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-right:0;
+    padding-left:0;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.userMenuItem:hover {
+    text-decoration: none;
+    color: rgb(138, 138, 138);
+    display: block;
+}
+
+#wrapper button{
+    width: 20%;
+    display: inline-block;
+}
+
+#deleteBtn, #completeBtn{
+    color:white;
+    background-color: black;
+    border:none;
+    width: 80%;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-left: 5px;
+}
+
+#completeBtn{
+    background-color: #FF4B33;
+    margin-top: 3px;
+}
+
