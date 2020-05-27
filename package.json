@@ -28,9 +28,8 @@
     "webpack": "^4.43.0"
   },
   "scripts": {
-    "build:staging": "env-cmd -f .env.staging npm run build",
-    "start": "react-scripts start",
     "build": "react-scripts build",
+    "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
