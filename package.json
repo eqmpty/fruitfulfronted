@@ -2,6 +2,9 @@
   "name": "front",
   "version": "0.1.0",
   "private": true,
+  "scripts":{
+    "start":"node index.js"
+  },
   "engines": {
     "node": "8.10.0"
   },
@@ -27,7 +30,6 @@
     "shortid": "^2.2.15"
   },
   "scripts": {
-    "start":"node index.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
