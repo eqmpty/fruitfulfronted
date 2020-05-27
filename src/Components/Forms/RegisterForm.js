@@ -40,7 +40,7 @@ class RegisterForm extends Component {
         const isValid = this.validate();
         if (isValid) {
             console.log(this.state);
-            axios.post('http://localhost:3001/signup', this.state, {'headers':this.headers})
+            axios.post('https://fruitfulbacked.herokuapp.com/signup', this.state, {'headers':this.headers})
         .then (response => {
             console.log (response)
         })
