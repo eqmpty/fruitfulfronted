@@ -38,15 +38,16 @@ export class LoginForm extends Component {
 
     axios.post('https://fruitfulbacked.herokuapp.com/login', this.state, { 'headers': this.headers })
       .then(response => {
-        if(response.status === 200){
-          this.setState({
-            isSignedUp: true
-          })
-        }
         if (response.data.accessToken) {
           console.log('')
           localStorage.setItem('user', JSON.stringify(response.data));
           console.log('User nick: ' + this.state.nick + response.data.accessToken.accessToken);
+        }
+
+        if(response.status === 200){
+          this.setState({
+            isSignedUp: true
+          })
         }
       })
 
