@@ -14,6 +14,7 @@ import CompletePage from './Pages/CompletePage';
 import Statistics from './Pages/Statistics';
 import FindUser from './Pages/FindUser';
 import FriendPage from './Pages/FriendPage';
+import RegSuccess from './Pages/RegSuccess';
 
 class App extends Component {
   render(){
@@ -27,8 +28,8 @@ class App extends Component {
         <Route exact path = '/about'  component = {WaitRorBack} />
         <Route exact path = '/feedback'  component = {WaitRorBack} />
         <Route exact path = '/signin' component = {LoginForm} /> 
-        <Route exact path = '/signin2' component = {LoginPage} /> 
         <Route exact path = '/signup' component = {RegisterForm} />
+	<Route exact path = '/success' component = {RegSuccess} />
         <Route exaxact path ='/logout' />
         <PrivateRoute exact path = '/userprofile' component = {UserPage} /> 
         <PrivateRoute exact path = '/addtodo' component = {AddToDoPage} />
