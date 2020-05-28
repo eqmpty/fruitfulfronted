@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import './FormsStyles.css'
+import {Redirect} from 'react-router-dom';
 
 import axios from 'axios';
 
@@ -15,7 +16,7 @@ class RegisterForm extends Component {
             email:'',
             emailError:'',
             password:'',
-            passwordError:''
+            passwordError:'',
         }
     }
 
@@ -29,7 +30,8 @@ class RegisterForm extends Component {
           nickError: "",
           nameError: "",
           emailError: "",
-          passwordError: ""
+          passwordError: "",
+          isSignedUp: false
         };
     
         if (this.state.nick.length < 10 || this.state.nick.length > 30) {
@@ -75,6 +77,11 @@ class RegisterForm extends Component {
             //this.props.history.push('/success')
             // window.location.reload()
         .then (response => {
+            if(response.status === 200){
+                this.setState({
+                    isSignedUp: true
+                })
+            }
             console.log (response)
         })
         .catch (error => {
@@ -84,6 +91,9 @@ class RegisterForm extends Component {
     }
 
     render () {
+        if (this.state.isSignedUp){
+            return <Redirect to = {{ pathname: "/success" }} />;
+        }
         const {nick, name, email, password, nickError, nameError,emailError, passwordError } = this.state;
         return (
             <div>
