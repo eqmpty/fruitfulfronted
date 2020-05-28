@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './FormsStyles.css'
 import axios from 'axios';
 import UserProfile from '../User/UserProfile';
+import {Redirect} from 'react-router-dom';
 
 export const UserFromContext = createContext()
 
@@ -14,6 +15,7 @@ export class LoginForm extends Component {
       password: '',
       message: '',
       loading: false,
+      isSignedUp: false
     }
   }
 
@@ -36,13 +38,15 @@ export class LoginForm extends Component {
 
     axios.post('https://fruitfulbacked.herokuapp.com/login', this.state, { 'headers': this.headers })
       .then(response => {
+        if(response.status === 200){
+          this.setState({
+            isSignedUp: true
+          })
+        }
         if (response.data.accessToken) {
           console.log('')
           localStorage.setItem('user', JSON.stringify(response.data));
-          //console.log(accessToken)
           console.log('User nick: ' + this.state.nick + response.data.accessToken.accessToken);
-          //this.props.history.push('/userprofile');
-          // window.location.reload();
         }
       })
 
@@ -52,6 +56,9 @@ export class LoginForm extends Component {
   }
 
   render() {
+    if (this.state.isSignedUp){
+      return <Redirect to = {{ pathname: "/userprofile" }} />;
+    }
     const { nick, password, loading, message } = this.state;
     return (
         <div className='container'>
