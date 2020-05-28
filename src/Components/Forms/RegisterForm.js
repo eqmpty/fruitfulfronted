@@ -72,7 +72,7 @@ class RegisterForm extends Component {
         if (!err) {
             console.log(this.state);
             axios.post('https://fruitfulbacked.herokuapp.com/signup', this.state, {'headers':this.headers})
-            // this.props.history.push('/success');
+            this.props.history.push('/success')
             // window.location.reload()
         .then (response => {
             console.log (response)
