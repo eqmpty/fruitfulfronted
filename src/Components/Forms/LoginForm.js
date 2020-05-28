@@ -41,7 +41,7 @@ export class LoginForm extends Component {
           localStorage.setItem('user', JSON.stringify(response.data));
           //console.log(accessToken)
           console.log('User nick: ' + this.state.nick + response.data.accessToken.accessToken);
-          this.props.history.push('/userprofile');
+          //this.props.history.push('/userprofile');
           // window.location.reload();
         }
       })
