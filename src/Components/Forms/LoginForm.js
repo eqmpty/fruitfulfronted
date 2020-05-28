@@ -42,7 +42,7 @@ export class LoginForm extends Component {
           //console.log(accessToken)
           console.log('User nick: ' + this.state.nick + response.data.accessToken.accessToken);
           this.props.history.push('/userprofile');
-          window.location.reload();
+          // window.location.reload();
         }
       })
 
