@@ -25,19 +25,19 @@ class App extends Component {
       <Router>
       <Switch>
         <Route exact path = '/'  component = {MainPage} />
-        <Route exact path = '/whythisapp'  component = {WaitRorBack} />
-        <Route exact path = '/about'  component = {WaitRorBack} />
-        <Route exact path = '/feedback'  component = {WaitRorBack} />
-        <Route exact path = '/signin' component = {LoginForm} /> 
-        <Route exact path = '/signup' component = {RegisterForm} />
-	      <Route exact path = '/success' component = {RegSuccess} />
-        <Route exaxact path ='/logout' />
-        <PrivateRoute exact path = '/userprofile' component = {UserPage} /> 
-        <PrivateRoute exact path = '/addtodo' component = {AddToDoPage} />
-        <PrivateRoute exact path = '/completetodos' component = {CompletePage} />
-        <PrivateRoute exact path = '/statistics' component = {Statistics} />
-        <PrivateRoute exact path = '/finduser' component = {FindUser} />
-        <PrivateRoute exact path = "/user/:nick"  component = {FriendPage} />
+        <Route  path = '/whythisapp'  component = {WaitRorBack} />
+        <Route  path = '/about'  component = {WaitRorBack} />
+        <Route  path = '/feedback'  component = {WaitRorBack} />
+        <Route  path = '/signin' component = {LoginForm} /> 
+        <Route  path = '/signup' component = {RegisterForm} />
+	      <Route  path = '/success' component = {RegSuccess} />
+        <Route  path ='/logout' />
+        <PrivateRoute  path = '/userprofile' component = {UserPage} /> 
+        <PrivateRoute  path = '/addtodo' component = {AddToDoPage} />
+        <PrivateRoute  path = '/completetodos' component = {CompletePage} />
+        <PrivateRoute  path = '/statistics' component = {Statistics} />
+        <PrivateRoute  path = '/finduser' component = {FindUser} />
+        <PrivateRoute  path = "/user/:nick"  component = {FriendPage} />
         <Route component = {NotFound} />
       </Switch>
     </Router>
