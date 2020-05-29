@@ -15,6 +15,7 @@ import Statistics from './Pages/Statistics';
 import FindUser from './Pages/FindUser';
 import FriendPage from './Pages/FriendPage';
 import RegSuccess from './Pages/RegSuccess';
+import {withRouter} from 'react-router-dom';
 
 class App extends Component {
   render(){
@@ -29,13 +30,13 @@ class App extends Component {
         <Route exact path = '/feedback'  component = {WaitRorBack} />
         <Route exact path = '/signin' component = {LoginForm} /> 
         <Route exact path = '/signup' component = {RegisterForm} />
-	<Route exact path = '/success' component = {RegSuccess} />
+	      <Route exact path = '/success' component = {RegSuccess} />
         <Route exaxact path ='/logout' />
         <PrivateRoute exact path = '/userprofile' component = {UserPage} /> 
         <PrivateRoute exact path = '/addtodo' component = {AddToDoPage} />
         <PrivateRoute exact path = '/completetodos' component = {CompletePage} />
         <PrivateRoute exact path = '/statistics' component = {Statistics} />
-        <PrivateRoute exact path = '/finduser' component = {FindUser} />
+        <PrivateRoute exact path = '/finduser' component = {withRouter(FindUser)} />
         <PrivateRoute exact path = "/user/:nick"  component = {FriendPage} />
         <Route component = {NotFound} />
       </Switch>
