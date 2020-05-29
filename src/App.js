@@ -16,6 +16,7 @@ import FindUser from './Pages/FindUser';
 import FriendPage from './Pages/FriendPage';
 import RegSuccess from './Pages/RegSuccess';
 import {withRouter} from 'react-router-dom';
+import MyFriendsPage from './Pages/FriendPage';
 
 class App extends Component {
   render(){
@@ -38,6 +39,7 @@ class App extends Component {
         <PrivateRoute  path = '/statistics' component = {Statistics} />
         <PrivateRoute  path = '/finduser' component = {FindUser} />
         <PrivateRoute  path = "/user/:nick"  component = {withRouter(FriendPage)}/>
+        <PrivateRoute  path = "/myfriends"  component = {MyFriendsPage}/>
         <Route component = {NotFound} />
       </Switch>
     </Router>

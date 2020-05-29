@@ -60,7 +60,8 @@ export class UserNavBarVS extends Component{
                                 <Link className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> profile </Link>
                                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <Link className="dropdown-item" to = '/userprofile'> my profile </Link>
-                                        <Link className="dropdown-item" to = '/completetodos' > complete notes </Link>
+                                        <Link className="dropdown-item" to = '/myfriends'> my friends </Link>
+                                        {/* <Link className="dropdown-item" to = '/completetodos' > complete notes </Link> */}
                                     </div>
                             </li>
                             <input id = 'searchInput' className="form-control mr-sm-2" type="search" placeholder="search" aria-label="Search" name='findUser' value={this.state.findUser}  onChange={event => this.changeHandler(event)} />
