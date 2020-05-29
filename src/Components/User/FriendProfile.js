@@ -21,12 +21,8 @@ export class FriendProfile extends Component{
             console.log(result.data.id)
             console.log(typeof result)
         })
-        .catch(error){
-            console.log(error)
-        }
     }
-
-    }
+}
 
     render() {
         const {user} = this.state;
