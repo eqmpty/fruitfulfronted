@@ -16,7 +16,7 @@ import FindUser from './Pages/FindUser';
 import FriendPage from './Pages/FriendPage';
 import RegSuccess from './Pages/RegSuccess';
 import {withRouter} from 'react-router-dom';
-import MyFriendsPage from './Pages/FriendPage';
+import MyFriendsPage from './Pages/MyFriendsPage';
 
 class App extends Component {
   render(){
