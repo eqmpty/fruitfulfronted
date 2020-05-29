@@ -11,7 +11,7 @@ export class FriendAllToDo extends Component{
         }
     }
 
-    componentDidUpdate() {
+    componentDidMount() {
         const userNick = (this.props.match.params.nick);
         console.log(userNick)
         instance('user/' + userNick)
