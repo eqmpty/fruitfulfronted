@@ -11,7 +11,9 @@ import {BrowserRouter as Router} from 'react-router-dom';
 // const store = createStore(rootReducer);
 
 ReactDOM.render(
-    <App />,
+  <Router>
+    <App />
+  </Router>,
   document.getElementById('root')
 );
 
