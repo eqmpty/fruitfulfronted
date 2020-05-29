@@ -11,7 +11,7 @@ export class FriendProfile extends Component{
         }
     }
 
-    componentDidMount() {
+    componentWillReceiveProps(nextProps) {
         const userNick = (this.props.match.params.nick);
         console.log(userNick)
         instance.get('user/' + userNick)
