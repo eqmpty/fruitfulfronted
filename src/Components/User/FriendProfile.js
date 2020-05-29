@@ -11,8 +11,7 @@ export class FriendProfile extends Component{
         }
     }
 
-    componentDidUpdate(prevProps, prevState) {
-        if(prevState.user !== this.state.user){
+    componentDidMount() {
         const userNick = (this.props.match.params.nick);
         console.log(userNick)
         instance.get('user/' + userNick)
@@ -21,8 +20,8 @@ export class FriendProfile extends Component{
             console.log(result.data.id)
             console.log(typeof result)
         })
+
     }
-}
 
     render() {
         const {user} = this.state;
