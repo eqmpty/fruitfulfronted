@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Router} from 'react-router-dom';
 import './UserNaBarSV.css';
 import instance from '../../services/tokenprovider'
 import FriendProfile from '../User/FriendProfile';
@@ -64,7 +64,7 @@ export class UserNavBarVS extends Component{
                                     </div>
                             </li>
                             <input id = 'searchInput' className="form-control mr-sm-2" type="search" placeholder="search" aria-label="Search" name='findUser' value={this.state.findUser}  onChange={event => this.changeHandler(event)} />
-                            <li className="nav-item"> <Link to = {`/user/${users.nick}`} params = {users.nick} > {users.nick} </Link>  </li>
+                            <li className="nav-item"> <Router><Link to = {`/user/${users.nick}`} params = {users.nick} >   {users.nick} </Link>  </Router> </li>
                             <li className="nav-item"> {this.renderUsers} </li>
                             <li id ='logoutNavItem' className="nav-item"> <Link className="nav-link" to = '/' onClick = {this.logout} > log out</Link> </li>
                         </ul>
