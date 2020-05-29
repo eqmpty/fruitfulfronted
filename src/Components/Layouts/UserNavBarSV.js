@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import './UserNaBarSV.css';
 import instance from '../../services/tokenprovider'
 import FriendProfile from '../User/FriendProfile';
+import {withRouter} from 'react-router-dom';
 
 export class UserNavBarVS extends Component{
 
@@ -74,4 +75,4 @@ export class UserNavBarVS extends Component{
     }
 }
 
-export default UserNavBarVS;
+export default withRouter(UserNavBarVS);
