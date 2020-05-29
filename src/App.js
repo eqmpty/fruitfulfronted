@@ -37,7 +37,7 @@ class App extends Component {
         <PrivateRoute  path = '/completetodos' component = {CompletePage} />
         <PrivateRoute  path = '/statistics' component = {Statistics} />
         <PrivateRoute  path = '/finduser' component = {FindUser} />
-        <PrivateRoute  path = "/user/:nick"  component = {FriendPage} />
+        <PrivateRoute  path = "/user/:nick"  component = {withRouter(FriendPage)}/>
         <Route component = {NotFound} />
       </Switch>
     </Router>
