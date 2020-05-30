@@ -2,7 +2,6 @@ import React, { Component, createContext } from 'react'
 import { Link } from 'react-router-dom';
 import './FormsStyles.css'
 import axios from 'axios';
-import UserProfile from '../User/UserProfile';
 import {Redirect} from 'react-router-dom';
 
 export const UserFromContext = createContext()
@@ -15,12 +14,39 @@ export class LoginForm extends Component {
       password: '',
       message: '',
       loading: false,
-      isSignedUp: false
+      isSignedUp: false,
+      nickError:'',
+      passwordError:''
     }
   }
 
   changeHandler = event => {
     this.setState({ [event.target.name]: event.target.value })
+  }
+
+  validate = () => {
+    let isError = false;
+    const errors = {
+      nickError: "",
+      passwordError: "",
+    };
+
+    if (this.state.nick.length === 0) {
+      isError = true;
+      errors.nickError = "this field cannot be empty";
+    }
+
+    if (this.state.password.length === 0 ) {
+      isError = true;
+      errors.passwordError = "this field cannot be empty";
+    }
+
+    this.setState({
+      ...this.state,
+      ...errors
+    });
+
+    return isError
   }
 
   headers = {
@@ -31,12 +57,14 @@ export class LoginForm extends Component {
   handlerLogin = event => {
     console.log(this.state)
     event.preventDefault();
+    const err = this.validate();
     this.setState({
       message: "",
       loading: true
     });
 
-    axios.post('https://fruitfulbacked.herokuapp.com/login', this.state, { 'headers': this.headers })
+    if(!err){ 
+      axios.post('https://fruitfulbacked.herokuapp.com/login', this.state, { 'headers': this.headers })
       .then(response => {
         if (response.data.accessToken) {
           console.log('')
@@ -53,14 +81,24 @@ export class LoginForm extends Component {
 
       .catch(error => {
         console.log('!Error ' + error);
+        const resMessage = (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+          error.message ||
+          error.toString();
+          this.setState({
+            loading: false,
+            message: resMessage
+          }); 
       })
+    }
   }
 
   render() {
     if (this.state.isSignedUp){
       return <Redirect to = {{ pathname: "/userprofile" }} />;
     }
-    const { nick, password, loading, message } = this.state;
+    const { nick, password, loading, message, nickError, passwordError } = this.state;
     return (
         <div className='container'>
           <div className='row'>
@@ -69,12 +107,14 @@ export class LoginForm extends Component {
                 <form onSubmit={this.handlerLogin} className="login-form">
                   <p id='logo2'> fruitful </p>
                   <input type="text" placeholder="nick" name='nick' value={nick} onChange={this.changeHandler} />
+                  <p className = 'error'> {nickError} </p>
                   <input type="password" placeholder="password" name='password' value={password} onChange={this.changeHandler} />
-                  <button type = 'submit'> sign in </button>
+                  <p className = 'error'>{passwordError}</p>
+                  <button type = 'submit' disabled={loading}> sign in </button>
+                  {loading && (<span className="spinner-border spinner-border-sm"></span>)}
                   {message && (<div className="form-group">
-                    <div className="alert alert-danger" role="alert"> {message} </div> </div>)}
+                    <div className="error"> your data is incorrect. verify nick or password </div> </div>)}
                   <p id="message"> don't have account ? <Link to='/signup' >  sign up  </Link> </p>
-                  {/* {this.props.children} */}
                 </form> 
               </div>
             </div>
