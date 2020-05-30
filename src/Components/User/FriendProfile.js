@@ -23,6 +23,24 @@ export class FriendProfile extends Component{
 
     }
 
+    addFriend(UserId){
+        const {user} = this.state;
+        const formData = new FormData();
+        formData.append('UserId', UserId);
+        const options = {
+            body:formData
+        }
+        console.log(UserId)
+        instance.post('/addfriend/' + UserId, options)
+        .then(responce => {
+            console.log(responce);
+        }
+        )
+        .catch(error => {
+            console.log(error);
+        })
+    }
+
     render() {
         const {user} = this.state;
         return (
@@ -38,6 +56,7 @@ export class FriendProfile extends Component{
                     <div className='col-xs-12 col-lg-3 ' id='profileDescription' >
                         <p id='userName'> {user.name}</p>
                         <span className='userNick'>@</span><span className='userNick'> {user.nick} </span>
+                        <button onClick = {() => this.addFriend(user.id)} className = 'addFriend'> add </button>
                     </div>
                 </div>
             </div>
