@@ -77,6 +77,7 @@ export class LoginForm extends Component {
             isSignedUp: true
           })
         }
+        
       })
 
       .catch(error => {
@@ -90,6 +91,10 @@ export class LoginForm extends Component {
             loading: false,
             message: resMessage
           }); 
+      })
+    } else {
+      this.setState({
+        loading:false
       })
     }
   }
