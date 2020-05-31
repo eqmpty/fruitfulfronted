@@ -169,3 +169,24 @@
     }
   }
 
+#subscriptions {
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 90%;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: 5%;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+#subscriptionsLink{
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    color: black;
+}
+
+#subscriptionsLink:hover{
+    text-decoration: none;
+}
