@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import { withRouter } from 'react-router-dom'
 import instance from '../../services/tokenprovider';
+import {Link} from 'react-router-dom';
 
 export class FriendAllToDo extends Component{
     constructor(props){
@@ -41,7 +42,7 @@ export class FriendAllToDo extends Component{
                             {this.state.todos.map(todos => 
                             <div key = {todos.id} className = 'todosItem'> {todos.text} <hr></hr>
                             <p id = 'description'>{todos. description}</p>
-                            <p>add comment </p>
+                            <Link to = {`/comment/${todos.id}`}> add comment </Link>
                             <p>{todos.id}</p> </div>)}
                         </div>
                     </div>
