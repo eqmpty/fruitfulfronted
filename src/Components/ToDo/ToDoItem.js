@@ -13,13 +13,13 @@ export class ToDoItem extends Component {
 
     componentDidMount(){
         const ToDoItem = (this.props.match.params.todoid);
-        instance.get('getcurrentuser/' + ToDoItem)
+        instance.get('todocomment/' + ToDoItem)
         .then(result => {
             this.setState({currentToDo:result.data})
             console.log(result)
         })
     }
-    
+
     render(){
         return(
             <Fragment>
