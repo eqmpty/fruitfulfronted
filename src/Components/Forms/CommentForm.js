@@ -44,7 +44,7 @@ export class CommentForm extends Component{
                 <div className = 'container'>
                     <div className = 'row addToDoList'>
                         <div className = 'offset-lg-2 col-lg-8 toDoBack'>
-                            <form onSubmit = {this.sumbitComment}  className = 'addToDoForm' id = 'addComment'>
+                            <form onSubmit = {this.sumbitComment}  className = 'addCommentForm' id = 'addComment'>
                                 <p id = 'addNewTask'> add comment </p>
                                 <input name = 'comment' value = {comment} onChange = {this.enterComment} placeholder = 'write your comment'/>
                                 <button id = 'addComBtn' onChange = {this.sumbitComment}> add </button>
