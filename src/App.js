@@ -19,6 +19,7 @@ import {withRouter} from 'react-router-dom';
 import MyFriendsPage from './Pages/MyFriendsPage';
 //import CommentPage from './Pages/CommentPage';
 import CommentPage from './Pages/CommentPage';
+import UserItemComment from './Pages/UserItemComment';
 
 class App extends Component {
   render(){
@@ -42,8 +43,9 @@ class App extends Component {
         <PrivateRoute  path = '/finduser' component = {FindUser} />
         <PrivateRoute  path = "/user/:nick"  component = {withRouter(FriendPage)}/>
         <PrivateRoute  path = "/myfriends"  component = {MyFriendsPage}/>
-        //<PrivateRoute  path = "/comment/:todoid"  component = {CommentPage}/>
-	<PrivateRoute exact path = "/comment/:todoid"  component = {CommentPage} />
+        {/* //<PrivateRoute  path = "/comment/:todoid"  component = {CommentPage}/> */}
+	      <PrivateRoute exact path = "/comment/:todoid"  component = {CommentPage} />
+        <PrivateRoute exact path = "/useritemcomment/:todoid"  component = {CommentPage} />
         <Route component = {NotFound} />
       </Switch>
     </Router>
