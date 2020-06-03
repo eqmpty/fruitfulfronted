@@ -77,7 +77,7 @@ export class AllToDo extends Component{
                             <div id = 'wrapper'>
                                 <button  id= 'completeBtn' onClick = {() => this.completeItem(todos.id)}> Complete</button> 
                                 <button id= 'deleteBtn' onClick = {() => this.deleteItem(todos.id)}> Delete</button> 
-                                <Link to = {`/useritemcomment/${todos.id}`} > see comments </Link>
+                                <Link className = 'myLink' to = {`/useritemcomment/${todos.id}`} > see comments </Link>
                             </div>
                             </div>)}
                         </div> 

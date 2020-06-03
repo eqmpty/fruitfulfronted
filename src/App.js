@@ -45,7 +45,7 @@ class App extends Component {
         <PrivateRoute  path = "/myfriends"  component = {MyFriendsPage}/>
         {/* //<PrivateRoute  path = "/comment/:todoid"  component = {CommentPage}/> */}
 	      <PrivateRoute exact path = "/comment/:todoid"  component = {CommentPage} />
-        <PrivateRoute exact path = "/useritemcomment/:todoid"  component = {CommentPage} />
+        <PrivateRoute exact path = "/useritemcomment/:todoid"  component = {UserItemComment} />
         <Route component = {NotFound} />
       </Switch>
     </Router>
