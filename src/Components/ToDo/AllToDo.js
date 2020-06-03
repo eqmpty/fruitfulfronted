@@ -73,14 +73,12 @@ export class AllToDo extends Component{
                             {this.state.todos.map(todos => 
                             <div key = {todos.id} className = 'todosItem'> {todos.text} <hr></hr>
                             <p id = 'description'>{todos. description}</p>
-                            <p>{todos.id}</p>
                             <div id = 'wrapper'>
                                 <button  id= 'completeBtn' onClick = {() => this.completeItem(todos.id)}> Complete</button> 
                                 <button id= 'deleteBtn' onClick = {() => this.deleteItem(todos.id)}> Delete</button> 
                             </div>
                             </div>)}
-                        </div>
-                       
+                        </div> 
                     </div>
                 </div>
             </Fragment>

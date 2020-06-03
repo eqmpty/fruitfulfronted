@@ -42,8 +42,7 @@ export class FriendAllToDo extends Component{
                             {this.state.todos.map(todos => 
                             <div key = {todos.id} className = 'todosItem'> {todos.text} <hr></hr>
                             <p id = 'description'>{todos. description}</p>
-                            <Link to = {`/comment/${todos.id}`}> add comment </Link>
-                            <p>{todos.id}</p> </div>)}
+                            <Link className = 'myLink' to = {`/comment/${todos.id}`}> add comment </Link> </div>)}
                         </div>
                     </div>
                 </div>

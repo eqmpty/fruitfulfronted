@@ -171,3 +171,12 @@ a{
 .WaitBack{
   font-size: 20rem;
 }
+
+.myLink{
+  color:black;
+}
+
+.myLink:hover{
+  color:black;
+  text-decoration:none;
+}
