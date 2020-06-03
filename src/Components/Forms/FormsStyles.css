@@ -101,9 +101,9 @@ font-family: 'Source Sans Pro', sans-serif;
 
 .addCommentForm{
   border:0.5px solid rgb(214, 214, 214);
-    padding: 1rem;
-    width: 100%;
-    box-shadow: 0 0 20px 0 rgba(212, 211, 211, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 1rem;
+  width: 100%;
+  box-shadow: 0 0 20px 0 rgba(212, 211, 211, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 #addComInput {

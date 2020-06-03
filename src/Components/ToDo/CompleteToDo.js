@@ -26,7 +26,7 @@ export class CompleteToDo extends Component {
                         <div className = 'offset-lg-2 col-lg-8'>
                             {this.state.todos.map(todos => 
                             <div key = {todos.id} className = 'todosItem'> {todos.text} <hr></hr>
-                            <p>{todos.id}</p>
+                            {/* <p>{todos.id}</p> */}
                         </div>)}
                         </div>
                     </div>
