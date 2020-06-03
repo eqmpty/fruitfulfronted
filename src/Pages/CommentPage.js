@@ -9,7 +9,7 @@ export class CommentPage extends Component {
         return(
             <Fragment>
                 <UserNavBarSV />
-                <ToDoItem />
+                {/* <ToDoItem /> */}
                 <CommentForm />
                 <AllComments />
             </Fragment>
