@@ -1,6 +1,7 @@
 import React,{Component,Fragment} from 'react';
 import {withRouter} from 'react-router-dom';
 import instance from '../../services/tokenprovider'
+import './Comment.css'
 
 export class ToDoItem extends Component {
     constructor(props){
@@ -27,7 +28,7 @@ export class ToDoItem extends Component {
             <Fragment>
             <div className='container'>
                 <div className='row'>
-                    <div className='offset-lg-2 col-lg-8 todosItem'  >
+                    <div className='offset-lg-2 col-lg-8' id = 'ToDoItem'  >
                         <p id='userName'> {currentItem.text}</p> <hr></hr>
                         <p className='userNick'> {currentItem.description} </p>
                     </div>
