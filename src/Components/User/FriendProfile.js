@@ -23,6 +23,19 @@ export class FriendProfile extends Component{
 
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.user !== this.state.user) {
+            const userNick = (this.props.match.params.nick);
+            console.log(userNick)
+            instance.get('user/' + userNick)
+            .then(result => {
+                this.setState({user:result.data})
+                console.log(result.data.id)
+                console.log(typeof result)
+            })
+        }
+      }
+
     addFriend(UserId){
         const {user} = this.state;
         const formData = new FormData();
