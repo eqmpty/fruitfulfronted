@@ -21,6 +21,18 @@ export class AllToDo extends Component{
         })
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.todos !== this.state.todos) {
+            instance.get('showalltodos')
+            .then(responce => {
+                const todos = responce.data;
+                this.setState({
+                    todos
+                })
+            })
+        }
+      }
+
     completeItem(toDoId){
         const {todos} = this.state;
         const formData = new FormData();
