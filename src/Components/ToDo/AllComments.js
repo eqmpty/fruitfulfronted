@@ -24,6 +24,21 @@ export class AllComments extends Component {
             console.log(comments)
         })
     }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.comments !== this.state.comments) {
+            const currentItemId = (this.props.match.params.todoid);
+            instance.get('allcomments/' + currentItemId)
+            .then(responce => {
+            const comments = responce.data;
+            this.setState({
+                comments
+            })
+            console.log(comments)
+        })
+        }
+    }
+
     render(){
         return(
             <Fragment>
