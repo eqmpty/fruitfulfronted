@@ -20,6 +20,7 @@ import MyFriendsPage from './Pages/MyFriendsPage';
 //import CommentPage from './Pages/CommentPage';
 import CommentPage from './Pages/CommentPage';
 import UserItemComment from './Pages/UserItemComment';
+import AboutUsPage from './Pages/AboutUsPage';
 
 class App extends Component {
   render(){
@@ -30,7 +31,7 @@ class App extends Component {
       <Switch>
         <Route exact path = '/'  component = {MainPage} />
         <Route  path = '/whythisapp'  component = {WaitRorBack} />
-        <Route  path = '/about'  component = {WaitRorBack} />
+        <Route  path = '/about'  component = {AboutUsPage} />
         <Route  path = '/feedback'  component = {WaitRorBack} />
         <Route  path = '/signin' component = {LoginForm} /> 
         <Route  path = '/signup' component = {RegisterForm} />
