@@ -120,5 +120,14 @@ font-family: 'Source Sans Pro', sans-serif;
 
 #aboutPage{
   margin-top: 5rem;
-  text-align: justify;
+  text-align: center;
+}
+
+#signUpLink{
+  text-align: center;
+  color:rgb(116, 116, 116);
+}
+
+#signUpLink{
+  color:black;
 }

@@ -17,7 +17,7 @@ export class AboutUsForm extends Component {
                                 state of your tasks . Also you can see other users,subscribe to them  
                                 and comment their notes.
                             </p>
-                            <Link to = '/singup' > sign up now </Link>
+                            <Link to = '/signup' id = 'signUpLink' > sign up now </Link>
                         </form>
                     </div>
                 </div>
