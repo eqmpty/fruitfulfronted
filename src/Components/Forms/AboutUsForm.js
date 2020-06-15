@@ -8,7 +8,7 @@ export class AboutUsForm extends Component {
             <Fragment>
                 <div className = 'container'>
                     <div className = 'row'>
-                        <form className = 'offset-lg-3 col-lg-6'>
+                        <form id = 'aboutPage' className = 'offset-lg-3 col-lg-6'>
                             <p id = 'addNewTask'>about us</p>
                             <p>
                                 App which helps you to be more productive. This app is an application 
@@ -17,6 +17,7 @@ export class AboutUsForm extends Component {
                                 state of your tasks . Also you can see other users,subscribe to them  
                                 and comment their notes.
                             </p>
+                            <Link to = '/singup' > sign up now </Link>
                         </form>
                     </div>
                 </div>
